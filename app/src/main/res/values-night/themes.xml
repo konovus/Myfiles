@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyFiles" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/bg_night_theme</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/text_night_theme</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/category_bg_night_theme</item>
+        <item name="colorSecondaryVariant">@color/gray</item>
+        <item name="colorOnSecondary">@color/light_gray</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/bg_night_theme</item>
+        <!-- Customize your theme here. -->
+        <item name="backgroundColor">@color/bg_night_theme</item>
+        <item name="titleTextColor">@color/text_night_theme</item>
+        <item name="actionBarTheme">@style/ThemeOverlay.Actionbar</item>
+        <item name="shadowColor">@color/gray</item>
+
+    </style>
+
+    <style name="ThemeOverlay.Actionbar" parent="ThemeOverlay.MaterialComponents.ActionBar.Surface" >
+        <item name="android:backgroundTint">@color/gray</item>
+        <item name="android:background">@color/gray</item>
+        <item name="android:textColorPrimary">@color/text_night_theme</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+
+    </style>
+</resources>

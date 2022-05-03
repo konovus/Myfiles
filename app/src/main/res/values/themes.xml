@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyFiles" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/bg_day_theme</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/text_day_theme</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/category_bg_day_theme</item>
+        <item name="colorSecondaryVariant">@color/light_gray</item>
+        <item name="colorOnSecondary">@color/gray</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/bg_day_theme</item>
+        <!-- Customize your theme here. -->
+        <item name="backgroundColor">@color/bg_day_theme</item>
+        <item name="titleTextColor">@color/text_day_theme</item>
+        <item name="actionBarTheme">@style/ThemeOverlay.Actionbar</item>
+        <item name="shadowColor">@color/light_gray</item>
+    </style>
+
+    <style name="ThemeOverlay.Actionbar" parent="ThemeOverlay.MaterialComponents.ActionBar.Surface" >
+        <item name="android:background">@color/bg_day_theme</item>
+        <item name="android:backgroundTint">@color/bg_day_theme</item>
+        <item name="android:textColorPrimary">@color/text_day_theme</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
+
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+<!--        <item name="tabIndicatorColor">?attr/colorAccent</item>-->
+<!--        <item name="tabIndicatorHeight">2dp</item>-->
+<!--        <item name="tabPaddingStart">12dp</item>-->
+<!--        <item name="tabPaddingEnd">12dp</item>-->
+        <item name="tabBackground">?attr/backgroundColor</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/blue</item>
+        <item name="tabTextColor">@color/light_gray</item>
+        <item name="tabIconTint">@color/tab_color_selector</item>
+    </style>
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="textAllCaps">false</item>
+    </style>
+</resources>

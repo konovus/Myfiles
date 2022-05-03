@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.konovus.myfiles.ui.mainScreen.MainFragment"
+        android:label="File Manager"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_categoryFiles"
+            app:destination="@id/categoryFiles" />
+        <action
+            android:id="@+id/action_mainFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_storageExplorerFragment"
+            app:destination="@id/storageExplorerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFiles"
+        android:name="com.konovus.myfiles.ui.categoryFilesScreen.CategoryFiles"
+        android:label="{title}"
+        tools:layout="@layout/category_files_fragment" >
+        <argument
+            android:name="folder"
+            app:argType="com.konovus.myfiles.entities.MyFolder" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_categoryFiles_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_categoryFiles_to_videoPlayerFragment"
+            app:destination="@id/videoPlayerFragment" />
+        <action
+            android:id="@+id/action_categoryFiles_to_pagerFragment"
+            app:destination="@id/pagerFragment" />
+        <action
+            android:id="@+id/action_categoryFiles_to_imagePagerItemFragment"
+            app:destination="@id/imagePagerItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.konovus.myfiles.ui.searchScreen.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/search_fragment">
+        <argument
+            android:name="data"
+            app:argType="com.konovus.myfiles.entities.MyData" />
+        <action
+            android:id="@+id/action_searchFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.konovus.myfiles.ui.detailsScreen.DetailsFragment"
+        android:label="Storage information"
+        tools:layout="@layout/details_fragment" />
+    <fragment
+        android:id="@+id/storageExplorerFragment"
+        android:name="com.konovus.myfiles.ui.storageExplorerScreen.StorageExplorerFragment"
+        android:label="File Manager"
+        tools:layout="@layout/storage_explorer_fragment" >
+        <action
+            android:id="@+id/action_storageExplorerFragment_to_videoPlayerFragment"
+            app:destination="@id/videoPlayerFragment" />
+        <action
+            android:id="@+id/action_storageExplorerFragment_to_pagerFragment"
+            app:destination="@id/pagerFragment" />
+        <action
+            android:id="@+id/action_storageExplorerFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.konovus.myfiles.ui.videoPlayerScreen.VideoPlayerFragment"
+        android:label="Video player"
+        tools:layout="@layout/video_player_fragment" >
+        <argument
+            android:name="path"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagerFragment"
+        android:name="com.konovus.myfiles.ui.pagerScreen.PagerFragment"
+        android:label="Image"
+        tools:layout="@layout/pager_fragment">
+        <argument
+            android:name="data"
+            app:argType="com.konovus.myfiles.entities.MyData" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/imagePagerItemFragment"
+        android:name="com.konovus.myfiles.ui.pagerScreen.ImagePagerItemFragment"
+        android:label="ImagePagerItemFragment" />
+</navigation>
