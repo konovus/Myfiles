@@ -211,7 +211,6 @@ class MainFragment : Fragment(R.layout.main_fragment) {
         return result == permissions.size
     }
 
-
     // region Boilerplate methods
 
     private fun initClickListeners(data: MyData) {
